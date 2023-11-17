@@ -41,42 +41,40 @@
   
           var searchTerm = document.getElementById('search-input').value.toLowerCase();
 
+          
           var url = [
-            ['石川昂弥','https://wizamari1138.github.io/tyunitisennseki/sensyu/naiya/25_isikawa.html']
-            ["石垣雅海",'https://wizamari1138.github.io/tyunitisennseki/sensyu/naiya/32_isigaki.html']
-            ["土田龍空",'https://wizamari1138.github.io/tyunitisennseki/sensyu/naiya/45_tutida.html']
-            ["溝脇隼人",'https://wizamari1138.github.io/tyunitisennseki/sensyu/naiya/48_mizowaki.html']
-            ["髙松渡",'https://wizamari1138.github.io/tyunitisennseki/sensyu/naiya/51_takamatu.html']
-            ["福田永将",'https://wizamari1138.github.io/tyunitisennseki/sensyu/naiya/55_hukuda.html']
-            ["星野真生",'https://wizamari1138.github.io/tyunitisennseki/sensyu/naiya/56_hosino.html']
-            ["堂上直倫",'https://wizamari1138.github.io/tyunitisennseki/sensyu/naiya/63_donoue.html']
-            ["ダヤンビシエド",'https://wizamari1138.github.io/tyunitisennseki/sensyu/naiya/66_dayan.html']
-            ["鵜飼航丞",'https://wizamari1138.github.io/tyunitisennseki/sensyu/gaiya/4_ukai.html']
-            ["大島洋平",'https://wizamari1138.github.io/tyunitisennseki/sensyu/gaiya/8_osima.html']
-            ["福元悠真",'https://wizamari1138.github.io/tyunitisennseki/sensyu/gaiya/23_hukumoto.html']
-            ["三好大倫",'https://wizamari1138.github.io/tyunitisennseki/sensyu/gaiya/30_miyosi.html']
-            ["伊藤康祐",'https://wizamari1138.github.io/tyunitisennseki/sensyu/gaiya/49_itou.html']
-            ["加藤翔平",'https://wizamari1138.github.io/tyunitisennseki/sensyu/gaiya/52_katou.html']
-            ["後藤駿太",'https://wizamari1138.github.io/tyunitisennseki/sensyu/gaiya/53_gotou.html']
-            ["岡林勇希",'https://wizamari1138.github.io/tyunitisennseki/sensyu/gaiya/60_okabayasi.html']
-            ["大野奨太",'https://wizamari1138.github.io/tyunitisennseki/sensyu/hosyu/27_ono.html']
-            ["木下拓哉",'https://wizamari1138.github.io/tyunitisennseki/sensyu/hosyu/35_kinosita.html']
-            ["石橋康太",'https://wizamari1138.github.io/tyunitisennseki/sensyu/hosyu/58_isibasi.html']
-            ["",'']
-            ["",'']
+            ['石川昂弥','https://wizamari1138.github.io/tyunitisennseki/sensyu/naiya/25_isikawa.html'],
+            ['石垣雅海','https://wizamari1138.github.io/tyunitisennseki/sensyu/naiya/32_isigaki.html'],
+            ['土田龍空','https://wizamari1138.github.io/tyunitisennseki/sensyu/naiya/45_tutida.html'],
+            ['溝脇隼人','https://wizamari1138.github.io/tyunitisennseki/sensyu/naiya/48_mizowaki.html'],
+            ['髙松渡','https://wizamari1138.github.io/tyunitisennseki/sensyu/naiya/51_takamatu.html'],
+            ["福田永将",'https://wizamari1138.github.io/tyunitisennseki/sensyu/naiya/55_hukuda.html'],
+            ["星野真生",'https://wizamari1138.github.io/tyunitisennseki/sensyu/naiya/56_hosino.html'],
+            ["堂上直倫",'https://wizamari1138.github.io/tyunitisennseki/sensyu/naiya/63_donoue.html'],
+            ["ダヤンビシエド",'https://wizamari1138.github.io/tyunitisennseki/sensyu/naiya/66_dayan.html'],
+            ["鵜飼航丞",'https://wizamari1138.github.io/tyunitisennseki/sensyu/gaiya/4_ukai.html'],
+            ["大島洋平",'https://wizamari1138.github.io/tyunitisennseki/sensyu/gaiya/8_osima.html'],
+            ["福元悠真",'https://wizamari1138.github.io/tyunitisennseki/sensyu/gaiya/23_hukumoto.html'],
+            ["三好大倫",'https://wizamari1138.github.io/tyunitisennseki/sensyu/gaiya/30_miyosi.html'],
+            ["伊藤康祐",'https://wizamari1138.github.io/tyunitisennseki/sensyu/gaiya/49_itou.html'],
+            ["加藤翔平",'https://wizamari1138.github.io/tyunitisennseki/sensyu/gaiya/52_katou.html'],
+            ["後藤駿太",'https://wizamari1138.github.io/tyunitisennseki/sensyu/gaiya/53_gotou.html'],
+            ["岡林勇希",'https://wizamari1138.github.io/tyunitisennseki/sensyu/gaiya/60_okabayasi.html'],
+            ["大野奨太",'https://wizamari1138.github.io/tyunitisennseki/sensyu/hosyu/27_ono.html'],
+            ["木下拓哉",'https://wizamari1138.github.io/tyunitisennseki/sensyu/hosyu/35_kinosita.html'],
+            ["石橋康太",'https://wizamari1138.github.io/tyunitisennseki/sensyu/hosyu/58_isibasi.html'],
+            ["根尾昂",'sensyu/tousyu/7_neo.html'],
+            ["",''],
             ["",'']
           ]
+          
   
           // 特定の単語が入力された場合にリダイレクト
           for(var i = 0;i < url.length;i++){
           if (searchTerm === url[i][0]) {
               window.location.href = url[i][1]; // リダイレクト先のURLを指定
               break;
-          } else {
-              // 通常のサイト内検索ロジックを実行
-              // ここにサイト内検索のロジックを追加
-              alert('通常の検索処理を実行するか、特定の単語以外の場合の処理を追加することができます。');
-          }
+          } 
         }
         
       });
